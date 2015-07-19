@@ -8,7 +8,7 @@ ALLIANCES_SIZES = [32, 64, 128]
 FACTION_SIZES = [32, 64, 128]
 TYPE_SIZES = [32, 64, 128, 256, 512]
 
-def get_character_image_links(character_id):
+def get_character_links(character_id):
     """ Takes a character ID and returns a dict with all available size links.
 
     :param character_id: A character ID from EVE.
@@ -20,7 +20,7 @@ def get_character_image_links(character_id):
     return return_dict
 
 
-def get_corporation_image_links(corporation_id):
+def get_corporation_links(corporation_id):
     """ Takes a corporation ID and returns a dict with all available size links.
 
     :param corporation_id: A corporation ID from EVE.
@@ -31,7 +31,7 @@ def get_corporation_image_links(corporation_id):
 
     return return_dict
 
-def get_alliance_image_links(alliance_id):
+def get_alliance_links(alliance_id):
     """ Takes a alliance ID and returns a dict with all available size links.
 
     :param alliance_id: A alliance ID from EVE.
@@ -42,16 +42,16 @@ def get_alliance_image_links(alliance_id):
 
     return return_dict
 
-def get_faction_image_links(faction_id):
+def get_faction_links(faction_id):
     """ Takes a faction ID and returns a dict with all available size links.
 
     :param faction_id: A faction ID from EVE.
     :return: A dict of size and urls.
     """
 
-    return get_alliance_image_links(faction_id)
+    return get_alliance_links(faction_id)
 
-def get_type_image_links(type_id):
+def get_type_links(type_id):
     """ Takes a type ID and returns a dict with all available size links.
 
     :param type_id: A type ID from EVE.
@@ -101,6 +101,6 @@ def get_image_server_link(image_id, image_type, icon_size=128):
         url_type = 'Render'
         url_format = 'png'
 
-    full_url = "%s%s/%s_%s.%s" % (base_image_server_url, url_type, image_id, icon_size, url_format)
+    full_url = '{}{}/{}_{}.{}'.format(base_image_server_url, url_type, image_id, icon_size, url_format)
 
     return full_url
