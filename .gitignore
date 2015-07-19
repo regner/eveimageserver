@@ -1,2 +1,11 @@
+# Virtual Env
 env/
+venv/
+
+# PyCharm
 .idea/
+
+# Build Stuff
+dist/
+build/
+*.egg-info/
