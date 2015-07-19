@@ -6,6 +6,7 @@ venv/
 .idea/
 
 # Build Stuff
+*.pyc
 dist/
 build/
 *.egg-info/
