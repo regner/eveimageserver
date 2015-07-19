@@ -1,5 +1,5 @@
 # eveimageserver
-[![Coverage Status](https://coveralls.io/repos/Regner/eveimageserver/badge.svg?branch=master&service=github)](https://coveralls.io/github/Regner/eveimageserver?branch=master)
+[![Build Status](https://travis-ci.org/Regner/eveimageserver.svg?branch=master)](https://travis-ci.org/Regner/eveimageserver) [![Coverage Status](https://coveralls.io/repos/Regner/eveimageserver/badge.svg?branch=master&service=github)](https://coveralls.io/github/Regner/eveimageserver?branch=master)
 
 ## Environment Variables
 * __IMAGE_SERVER_URL:__ Defaults to 'https://image.eveonline.com/'. If you set
