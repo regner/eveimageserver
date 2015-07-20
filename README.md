@@ -1,5 +1,7 @@
 # eveimageserver
-[![Build Status](https://travis-ci.org/Regner/eveimageserver.svg?branch=master)](https://travis-ci.org/Regner/eveimageserver) [![Coverage Status](https://coveralls.io/repos/Regner/eveimageserver/badge.svg?branch=master&service=github)](https://coveralls.io/github/Regner/eveimageserver?branch=master)
+[![Build Status](https://travis-ci.org/Regner/eveimageserver.svg?branch=master)](https://travis-ci.org/Regner/eveimageserver)
+[![Coverage Status](https://coveralls.io/repos/Regner/eveimageserver/badge.svg?branch=master&service=github)](https://coveralls.io/github/Regner/eveimageserver?branch=master)
+[![PyPI version](https://badge.fury.io/py/eveimageserver.svg)](http://badge.fury.io/py/eveimageserver)
 
 ## Using
 ```python
