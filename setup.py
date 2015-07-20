@@ -19,7 +19,6 @@ setup(
     url="https://github.com/Regner/eveimageserver",
     packages=find_packages(),
     long_description=open('README.md').read(),
-    install_requires=[line.strip() for line in open('requirements.txt')],
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Topic :: Utilities",

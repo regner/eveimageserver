@@ -9,4 +9,4 @@ from .main import (
     get_image_server_link,
 )
 
-__version__ = '0.1.0'
+__version__ = '0.1.1'
