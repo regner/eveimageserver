@@ -79,7 +79,7 @@ def get_image_server_link(image_id, image_type, icon_size=128):
     :return: A full URL to the CCP image server.
     """
 
-    base_image_server_url = os.environ.get('IMAGE_SERVER_URL', 'https://image.eveonline.com/')
+    base_image_server_url = os.environ.get('IMAGE_SERVER_URL', 'https://imageserver.eveonline.com/')
 
     if image_type == 'char':
         url_type = 'Character'
