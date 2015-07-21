@@ -15,5 +15,5 @@ eveimageserver.get_alliance_links(123456)
 ```
 
 ## Environment Variables
-* __IMAGE_SERVER_URL:__ Defaults to 'https://image.eveonline.com/'. If you set
+* __IMAGE_SERVER_URL:__ Defaults to 'https://imageserver.eveonline.com/'. If you set
 your own environment variable for this be sure to include the trailing slash.
