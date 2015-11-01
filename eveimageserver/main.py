@@ -86,7 +86,7 @@ def get_image_server_link(image_id, image_type, icon_size=128):
     Renders: 32, 64, 128, 256, 512
 
     :param image_id: ID to be used in the URL.
-    :param image_type: Valid string options are: char, corp, alli, fac, type
+    :param image_type: Valid string options are: char, corp, alli, fac, type, render
     :param icon_size: See doc string for valid image sizes.
     :return: A full URL to the CCP image server.
     """
