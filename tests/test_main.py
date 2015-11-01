@@ -18,7 +18,7 @@ class EVEImageServerTestCase(unittest2.TestCase):
         mock_os.return_value = 'http://example.com/'
         image_link = eveimageserver.get_image_server_link(1234, 'type')
 
-        self.assertEqual(image_link, 'http://example.com/Render/1234_128.png')
+        self.assertEqual(image_link, 'http://example.com/Type/1234_128.png')
 
     @mock.patch('os.environ.get')
     def test_get_character_links(self, mock_os):
@@ -94,6 +94,21 @@ class EVEImageServerTestCase(unittest2.TestCase):
 
         mock_os.return_value = 'http://example.com/'
         links = eveimageserver.get_type_links(123456)
+
+        self.assertEqual(
+            links,
+            {
+                32: 'http://example.com/Type/123456_32.png',
+                64: 'http://example.com/Type/123456_64.png',
+            }
+        )
+
+    @mock.patch('os.environ.get')
+    def test_get_render_links(self, mock_os):
+        """ Test get_type_links gets the correct dictionary back. """
+
+        mock_os.return_value = 'http://example.com/'
+        links = eveimageserver.get_render_links(123456)
 
         self.assertEqual(
             links,

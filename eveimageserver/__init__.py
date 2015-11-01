@@ -6,6 +6,7 @@ from .main import (
     get_alliance_links,
     get_faction_links,
     get_type_links,
+    get_render_links,
     get_image_server_link,
 )
 

@@ -6,7 +6,8 @@ CHARACTER_SIZES = [32, 64, 128, 256, 512, 1024]
 CORPORATION_SIZES = [32, 64, 128, 256]
 ALLIANCES_SIZES = [32, 64, 128]
 FACTION_SIZES = [32, 64, 128]
-TYPE_SIZES = [32, 64, 128, 256, 512]
+TYPE_SIZES = [32, 64]
+RENDER_SIZES = [32, 64, 128, 256, 512]
 
 def get_character_links(character_id):
     """ Takes a character ID and returns a dict with all available size links.
@@ -62,6 +63,16 @@ def get_type_links(type_id):
 
     return return_dict
 
+def get_render_links(type_id):
+    """ Takes a type ID and returns a dict with all available size links.
+
+    :param type_id: A type ID from EVE.
+    :return: A dict of size and urls.
+    """
+
+    return_dict = {x: get_image_server_link(type_id, 'render', x) for x in RENDER_SIZES}
+
+    return return_dict
 
 def get_image_server_link(image_id, image_type, icon_size=128):
     """Takes an ID and type name and builds and image server URL.
@@ -71,10 +82,11 @@ def get_image_server_link(image_id, image_type, icon_size=128):
     Corporation: 32, 64, 128, 256
     Alliance: 32, 64, 128
     Faction: 32, 64, 128
-    Types: 32, 64, 128, 256, 512
+    Types: 32, 64
+    Renders: 32, 64, 128, 256, 512
 
     :param image_id: ID to be used in the URL.
-    :param image_type: Valid string options are: char, corp, alli, fac, type
+    :param image_type: Valid string options are: char, corp, alli, fac, type, render
     :param icon_size: See doc string for valid image sizes.
     :return: A full URL to the CCP image server.
     """
@@ -95,6 +107,10 @@ def get_image_server_link(image_id, image_type, icon_size=128):
 
     elif image_type == 'fac':
         url_type = 'Alliance'
+        url_format = 'png'
+
+    elif image_type == 'type':
+        url_type = 'Type'
         url_format = 'png'
 
     else:
