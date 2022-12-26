@@ -1,5 +1,5 @@
 # Build
-wheel==0.24.0
+wheel==0.38.1
 
 # Tests
 mock==1.2.0
